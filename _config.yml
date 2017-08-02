@@ -1,0 +1,4 @@
+destination: _site
+layouts_dir: _layouts
+sass:
+    sass_dir: _sass
