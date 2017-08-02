@@ -23,6 +23,16 @@ function getDy(eye, e) {
   return dy;
 }
 
+function getDxFromTilt(eye, e) {
+  var x0 = eye.left + (eye.right - eye.left) / 2;
+  var x1 = e.clientX;
+  var viewRadius = screen.width / 2;
+  var dx = (x1 - x0) / viewRadius;
+  if (dx < -1) dx = -1;
+  if (dx > 1) dx = 1;
+  return dx;
+}
+
 var watchTheCursor = function(e) {
   var lEye = eyes.left.getBoundingClientRect();
   var rEye = eyes.right.getBoundingClientRect();
@@ -37,4 +47,21 @@ var watchTheCursor = function(e) {
   eyes.left.firstElementChild.style.top = maxY * ldy + "px";
   eyes.right.firstElementChild.style.top = maxY * rdy + "px";
 };
+
+var watchTheTilt = function(e) {
+  var lEye = eyes.left.getBoundingClientRect();
+  var rEye = eyes.right.getBoundingClientRect();
+  var ldx = e.gamma/180;;
+  var rdx = e.gamma/180;;
+  var ldy = e.beta/90;;
+  var rdy = e.beta/90;;
+
+  eyes.left.firstElementChild.style.left = maxX / 2 + maxX / 2 * ldx + "px";
+  eyes.right.firstElementChild.style.left = maxX / 2 + maxX / 2 * rdx + "px";
+
+  eyes.left.firstElementChild.style.top = maxY * ldy + "px";
+  eyes.right.firstElementChild.style.top = maxY * rdy + "px";
+};
 document.addEventListener("mousemove", watchTheCursor);
+
+window.addEventListener("deviceorientation", watheTheTilt, false);
