@@ -53,8 +53,8 @@ var watchTheTilt = function(e) {
   var rEye = eyes.right.getBoundingClientRect();
   var ldx = -e.gamma/90;
   var rdx = -e.gamma/90;
-  var ldy = -e.beta/45;
-  var rdy = -e.beta/45;
+  var ldy = e.beta/90;
+  var rdy = e.beta/90;
 
   eyes.left.firstElementChild.style.left = maxX / 2 + maxX / 2 * ldx + "px";
   eyes.right.firstElementChild.style.left = maxX / 2 + maxX / 2 * rdx + "px";
