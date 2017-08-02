@@ -64,4 +64,4 @@ var watchTheTilt = function(e) {
 };
 document.addEventListener("mousemove", watchTheCursor);
 
-window.addEventListener("deviceorientation", watheTheTilt, false);
+window.addEventListener("deviceorientation", watchTheTilt, false);
