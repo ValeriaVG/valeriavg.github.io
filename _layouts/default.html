@@ -1,364 +1,399 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <title>ValeriaVG</title>
-   <link rel="stylesheet" href="https://rawgit.com/VVGCreative/mockery/master/css/mockery.css" >
+  <link rel="stylesheet" href="https://rawgit.com/VVGCreative/mockery/master/css/mockery.css">
 </head>
+
 <body>
-  <div class="padded">
-  <div class="frame">
-<div class="face">
-  <div class="features">
-    <div class="left eye-brow"></div>
-    <div class="right eye-brow"></div>
-    <div class="left eye" id="left-eye"><i><b></b></i></div>
-    <div class="right eye" id="right-eye"><i><b></b></i></div>
-    <div class="glasses"><i></i></div>
-    <div class="nose">
-      <i></i>
-    </div>
-    <div class="lips">
-      <div class="top lip"></div>
-      <div class="bottom lip"></div>
+  <div class="padded bg-grey-2">
+    <div class="frame">
+      <div class="face">
+        <div class="features">
+          <div class="left eye-brow"></div>
+          <div class="right eye-brow"></div>
+          <div class="left eye" id="left-eye"><i><b></b></i></div>
+          <div class="right eye" id="right-eye"><i><b></b></i></div>
+          <div class="glasses"><i></i></div>
+          <div class="nose">
+            <i></i>
+          </div>
+          <div class="lips">
+            <div class="top lip"></div>
+            <div class="bottom lip"></div>
+          </div>
+        </div>
+        <div class="left hair"></div>
+        <div class="right hair"></div>
+        <div class="left ear"></div>
+        <div class="right ear"></div>
+      </div>
     </div>
   </div>
-  <div class="left hair"></div>
-  <div class="right hair"></div>
-  <div class="left ear"></div>
-  <div class="right ear"></div>
-</div>
-</div>
-</div>
-<style>
-.frame {
-  background: skyblue;
-  width: 380px;
-  height: 360px;
-  border-radius: 380px;
-  margin: 20px auto;
-}
-.face {
-  background: rgb(246, 232, 218);
-  width: 300px;
-  height: 330px;
-  border-top-left-radius: 250px;
-  border-top-right-radius: 250px;
-  border-bottom-left-radius: 350px;
-  border-bottom-right-radius: 350px;
-  position: relative;
-  margin: 0 40px;
-  z-index: 1;
-}
-.features {
-  z-index: 3;
-}
-.eye {
-  width: 60px;
-  height: 30px;
-  background: white;
-  position: absolute;
-  top: 140px;
-  z-index: 4;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-  overflow: hidden;
-}
-.eye.left {
-  left: 60px;
-}
-.eye.right {
-  right: 60px;
-}
+  <style>
+    .frame {
+      background: skyblue;
+      width: 380px;
+      height: 360px;
+      border-radius: 380px;
+      margin: 20px auto;
+    }
 
-.eye i {
-  position: absolute;
-  left: 15px;
-  top: 0;
-  width: 30px;
-  height: 30px;
-}
-.eye i:before {
-  content: "";
-  position: absolute;
-  background: #356e13;
-  border-radius: 30px;
-  width: 30px;
-  height: 30px;
-  left: 0;
-  z-index: 2;
-}
-.eye i:after {
-  content: "";
-  position: absolute;
-  background: black;
-  border-radius: 30px;
-  width: 10px;
-  height: 10px;
-  left: 10px;
-  top: 10px;
-  z-index: 5;
-}
-.eye > i > b {
-  display: block;
-  background: white;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  opacity: 0.4;
-  border-radius: 10px;
-  left: 15px;
-  top: 5px;
-  z-index: 3;
-}
+    .face {
+      background: rgb(246, 232, 218);
+      width: 300px;
+      height: 330px;
+      border-top-left-radius: 250px;
+      border-top-right-radius: 250px;
+      border-bottom-left-radius: 350px;
+      border-bottom-right-radius: 350px;
+      position: relative;
+      margin: 0 40px;
+      z-index: 1;
+    }
 
-.hair {
-  background: #624646;
-  position: absolute;
-  width: 162px;
-  height: 130px;
-  border-top-left-radius: 150px;
-  border-bottom-right-radius: 150px;
-  top: -18px;
-  perspective: 1000px;
-  border: 5px solid #624646;
-  box-shadow: 0 0 0 1px #624646;
-}
-.hair:before {
-  content: "";
-  display: block;
-  background: #624646;
-  position: absolute;
-  width: 45px;
-  height: 400px;
-  top: 65px;
-  transform: rotateX(40deg);
-  left: -10px;
-  box-shadow: 0 0 0 4px #624646;
-}
-.left.hair {
-  left: 0;
-}
-.right.hair {
-  right: 0;
--webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  -moz-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
-.ear {
-  position: absolute;
-  width: 30px;
-  height: 80px;
-  background: rgb(236, 217, 199);
-  top: 120px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 40px;
-}
-.ear.left {
-  left: -30px;
-}
-.ear.right {
-  right: -30px;
-  transform: scale(-1, 1);
-}
-.eye-brow {
-  background: #624646;
-  width: 70px;
-  height: 20px;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-  position: absolute;
-  top: 130px;
-  z-index: 5;
-}
-.left.eye-brow {
-  left: 55px;
-}
-.right.eye-brow {
-  right: 55px;
-  transform: scale(-1, 1);
-}
-.eye-brow:before {
-  content: "";
-  position: absolute;
-  background: rgb(246, 232, 218);
-  width: 70px;
-  height: 15px;
-  top: 5px;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-}
-.ear:after {
-  content: "";
-  position: absolute;
-  background: rgba(0, 0, 0, .12);
-  display: block;
-  width: 15px;
-  height: 40px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  top: 20px;
-  lefT: 15px;
-}
-.glasses {
-  position: absolute;
-  top: 145px;
-  lefT: 50px;
-  width: 200px;
-  height: 20px;
-  z-index: 6;
-}
-.glasses:before {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 70px;
-  background: rgba(255, 255, 255, .5);
-  display: block;
-  border: 5px solid rgba(125, 125, 125, 0.5);
-  border-radius: 15px;
-  left: 0;
-}
-.glasses:after {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 70px;
-  background: rgba(255, 255, 255, .5);
-  display: block;
-  border: 5px solid rgba(125, 125, 125, 0.5);
-  border-radius: 15px;
-  right: 0;
-}
-.glasses i {
-  display: block;
-  position: absolute;
-  height: 5px;
-  width: 50px;
-  top: 10px;
-  lefT: 75px;
-  background: rgba(125, 125, 125, 0.5);
-}
-.nose {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 200px;
-  left: 130px;
-  z-index: 3;
-  opacity: .5;
-}
-.nose i {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #f6e8da;
-  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .12);
-  border-radius: 40px;
-  top: 0px;
-  left: 0px;
-  z-index: 4;
-}
-.nose:before {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  z-index: 2;
-  background: #f6e8da;
-  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .12);
-  border-radius: 30px;
-  display: block;
-  left: -10px;
-  top: 5px;
-  z-index: 2;
-}
-.nose:after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  z-index: 2;
-  background: #f6e8da;
-  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .12);
-  border-radius: 30px;
-  display: block;
-  right: -10px;
-  top: 5px;
-  z-index: 2;
-}
-.top.lip {
-  position: absolute;
-  background: pink;
-  top: 265px;
-  left: 110px;
-  width: 80px;
-  height: 10px;
-  border-top-left-radius: 120px;
-  border-top-right-radius: 120px;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
-  z-index: 4;
-  box-shadow: 0 1px 15px 8px rgba(255, 255, 255, .27);
-}
-.bottom.lip {
-  position: absolute;
-  background: pink;
-  top: 270px;
-  left: 110px;
-  width: 80px;
-  height: 20px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
-  z-index: 3;
-}
-</style>
-<script>
-var eyes = {};
+    .features {
+      z-index: 3;
+    }
 
-eyes.left = document.getElementById("left-eye");
-eyes.right = document.getElementById("right-eye");
-var maxX = 30;
-var maxY = 15;
-function getDx(eye, e) {
-  var x0 = eye.left + (eye.right - eye.left) / 2;
-  var x1 = e.clientX;
-  var viewRadius = screen.width / 2;
-  var dx = (x1 - x0) / viewRadius;
-  if (dx < -1) dx = -1;
-  if (dx > 1) dx = 1;
-  return dx;
-}
-function getDy(eye, e) {
-  var y0 = eye.top + (eye.bottom - eye.top) / 2;
-  var y1 = e.clientY;
-  var viewRadius = screen.height / 2;
-  var dy = (y1 - y0) / viewRadius;
-  if (dy < -1) dy = -1;
-  if (dy > 1) dy = 1;
-  return dy;
-}
+    .eye {
+      width: 60px;
+      height: 30px;
+      background: white;
+      position: absolute;
+      top: 140px;
+      z-index: 4;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      overflow: hidden;
+    }
 
-var watchTheCursor = function(e) {
-  var lEye = eyes.left.getBoundingClientRect();
-  var rEye = eyes.right.getBoundingClientRect();
-  var ldx = getDx(lEye, e);
-  var rdx = getDx(rEye, e);
-  var ldy = getDy(lEye, e);
-  var rdy = getDy(rEye, e);
+    .eye.left {
+      left: 60px;
+    }
 
-  eyes.left.firstElementChild.style.left = maxX / 2 + maxX / 2 * ldx + "px";
-  eyes.right.firstElementChild.style.left = maxX / 2 + maxX / 2 * rdx + "px";
+    .eye.right {
+      right: 60px;
+    }
 
-  eyes.left.firstElementChild.style.top = maxY * ldy + "px";
-  eyes.right.firstElementChild.style.top = maxY * rdy + "px";
-};
-document.addEventListener("mousemove", watchTheCursor);
+    .eye i {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      width: 30px;
+      height: 30px;
+    }
 
-</script>
+    .eye i:before {
+      content: "";
+      position: absolute;
+      background: #356e13;
+      border-radius: 30px;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      z-index: 2;
+    }
+
+    .eye i:after {
+      content: "";
+      position: absolute;
+      background: black;
+      border-radius: 30px;
+      width: 10px;
+      height: 10px;
+      left: 10px;
+      top: 10px;
+      z-index: 5;
+    }
+
+    .eye>i>b {
+      display: block;
+      background: white;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      opacity: 0.4;
+      border-radius: 10px;
+      left: 15px;
+      top: 5px;
+      z-index: 3;
+    }
+
+    .hair {
+      background: #624646;
+      position: absolute;
+      width: 162px;
+      height: 130px;
+      border-top-left-radius: 150px;
+      border-bottom-right-radius: 150px;
+      top: -18px;
+      perspective: 1000px;
+      border: 5px solid #624646;
+      box-shadow: 0 0 0 1px #624646;
+    }
+
+    .hair:before {
+      content: "";
+      display: block;
+      background: #624646;
+      position: absolute;
+      width: 45px;
+      height: 400px;
+      top: 65px;
+      transform: rotateX(40deg);
+      left: -10px;
+      box-shadow: 0 0 0 4px #624646;
+    }
+
+    .left.hair {
+      left: 0;
+    }
+
+    .right.hair {
+      right: 0;
+      -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      -moz-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+
+    .ear {
+      position: absolute;
+      width: 30px;
+      height: 80px;
+      background: rgb(236, 217, 199);
+      top: 120px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 40px;
+    }
+
+    .ear.left {
+      left: -30px;
+    }
+
+    .ear.right {
+      right: -30px;
+      transform: scale(-1, 1);
+    }
+
+    .eye-brow {
+      background: #624646;
+      width: 70px;
+      height: 20px;
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+      position: absolute;
+      top: 130px;
+      z-index: 5;
+    }
+
+    .left.eye-brow {
+      left: 55px;
+    }
+
+    .right.eye-brow {
+      right: 55px;
+      transform: scale(-1, 1);
+    }
+
+    .eye-brow:before {
+      content: "";
+      position: absolute;
+      background: rgb(246, 232, 218);
+      width: 70px;
+      height: 15px;
+      top: 5px;
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+    }
+
+    .ear:after {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, .12);
+      display: block;
+      width: 15px;
+      height: 40px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      top: 20px;
+      lefT: 15px;
+    }
+
+    .glasses {
+      position: absolute;
+      top: 145px;
+      lefT: 50px;
+      width: 200px;
+      height: 20px;
+      z-index: 6;
+    }
+
+    .glasses:before {
+      position: absolute;
+      content: "";
+      height: 30px;
+      width: 70px;
+      background: rgba(255, 255, 255, .5);
+      display: block;
+      border: 5px solid rgba(125, 125, 125, 0.5);
+      border-radius: 15px;
+      left: 0;
+    }
+
+    .glasses:after {
+      position: absolute;
+      content: "";
+      height: 30px;
+      width: 70px;
+      background: rgba(255, 255, 255, .5);
+      display: block;
+      border: 5px solid rgba(125, 125, 125, 0.5);
+      border-radius: 15px;
+      right: 0;
+    }
+
+    .glasses i {
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 50px;
+      top: 10px;
+      lefT: 75px;
+      background: rgba(125, 125, 125, 0.5);
+    }
+
+    .nose {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 200px;
+      left: 130px;
+      z-index: 3;
+      opacity: .5;
+    }
+
+    .nose i {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #f6e8da;
+      box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .12);
+      border-radius: 40px;
+      top: 0px;
+      left: 0px;
+      z-index: 4;
+    }
+
+    .nose:before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      z-index: 2;
+      background: #f6e8da;
+      box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .12);
+      border-radius: 30px;
+      display: block;
+      left: -10px;
+      top: 5px;
+      z-index: 2;
+    }
+
+    .nose:after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      z-index: 2;
+      background: #f6e8da;
+      box-shadow: 0 2px 1px 1px rgba(0, 0, 0, .12);
+      border-radius: 30px;
+      display: block;
+      right: -10px;
+      top: 5px;
+      z-index: 2;
+    }
+
+    .top.lip {
+      position: absolute;
+      background: pink;
+      top: 265px;
+      left: 110px;
+      width: 80px;
+      height: 10px;
+      border-top-left-radius: 120px;
+      border-top-right-radius: 120px;
+      border-bottom-left-radius: 150px;
+      border-bottom-right-radius: 150px;
+      z-index: 4;
+      box-shadow: 0 1px 15px 8px rgba(255, 255, 255, .27);
+    }
+
+    .bottom.lip {
+      position: absolute;
+      background: pink;
+      top: 270px;
+      left: 110px;
+      width: 80px;
+      height: 20px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 150px;
+      border-bottom-right-radius: 150px;
+      z-index: 3;
+    }
+  </style>
+  <script>
+    var eyes = {};
+
+    eyes.left = document.getElementById("left-eye");
+    eyes.right = document.getElementById("right-eye");
+    var maxX = 30;
+    var maxY = 15;
+
+    function getDx(eye, e) {
+      var x0 = eye.left + (eye.right - eye.left) / 2;
+      var x1 = e.clientX;
+      var viewRadius = screen.width / 2;
+      var dx = (x1 - x0) / viewRadius;
+      if (dx < -1) dx = -1;
+      if (dx > 1) dx = 1;
+      return dx;
+    }
+
+    function getDy(eye, e) {
+      var y0 = eye.top + (eye.bottom - eye.top) / 2;
+      var y1 = e.clientY;
+      var viewRadius = screen.height / 2;
+      var dy = (y1 - y0) / viewRadius;
+      if (dy < -1) dy = -1;
+      if (dy > 1) dy = 1;
+      return dy;
+    }
+
+    var watchTheCursor = function(e) {
+      var lEye = eyes.left.getBoundingClientRect();
+      var rEye = eyes.right.getBoundingClientRect();
+      var ldx = getDx(lEye, e);
+      var rdx = getDx(rEye, e);
+      var ldy = getDy(lEye, e);
+      var rdy = getDy(rEye, e);
+
+      eyes.left.firstElementChild.style.left = maxX / 2 + maxX / 2 * ldx + "px";
+      eyes.right.firstElementChild.style.left = maxX / 2 + maxX / 2 * rdx + "px";
+
+      eyes.left.firstElementChild.style.top = maxY * ldy + "px";
+      eyes.right.firstElementChild.style.top = maxY * rdy + "px";
+    };
+    document.addEventListener("mousemove", watchTheCursor);
+  </script>
+  <div class="padded text-center">
   {{ content }}
+  </div>
 </body>
+
 </html>
