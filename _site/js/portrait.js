@@ -51,10 +51,10 @@ var watchTheCursor = function(e) {
 var watchTheTilt = function(e) {
   var lEye = eyes.left.getBoundingClientRect();
   var rEye = eyes.right.getBoundingClientRect();
-  var ldx = e.gamma/180;;
-  var rdx = e.gamma/180;;
-  var ldy = e.beta/90;;
-  var rdy = e.beta/90;;
+  var ldx = -e.gamma/90;
+  var rdx = -e.gamma/90;
+  var ldy = -e.beta/45;
+  var rdy = -e.beta/45;
 
   eyes.left.firstElementChild.style.left = maxX / 2 + maxX / 2 * ldx + "px";
   eyes.right.firstElementChild.style.left = maxX / 2 + maxX / 2 * rdx + "px";
