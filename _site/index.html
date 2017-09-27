@@ -2,14 +2,60 @@
 <html lang="en">
 
 <head>
-  <title>ValeriaVG</title>
+    <title>Valeria Viana Gusmao - Web Enthusiast - JavaScript Full-Stack Developer</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://rawgit.com/VVGCreative/mockery/master/css/mockery.css">
+  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
+
 </head>
 
 <body>
+  <canvas id="skills" style="height: 500px; width:800px;
+position: absolute;border:1px solid rgba(255,255,255,.12);left:calc(50% - 400px); border-top-left-radius:50%; border-top-right-radius:50%;" height="1000px" width="1600px"></canvas>
+<script>
+var skills = [
+  ['HTML','Pug','Stylus','LESS','CSS', 'SASS','JavaScript','ES6/ES2015'],
+  ['CoffeeScript','NodeJS', 'ExpressJS', 'SailsJS'],
+  ['MongoDB', 'MySQL', 'PostgreSQL','PHP','ModX Evo/Revo','Laravel','PHPUnit'],
+  ['React','Condova','Electron','ThreeJS','JQuery','VueJS','ExtJS','Enzyme'],
+  ['Mocha & Chai','JSX', 'jQUnit', 'TDD', 'BDD', 'Scrum','Handlebars','Twig'],
+  ['Responsive Design','Pixel Perfect Markup','Cross-browser compatibility'],
+  ['Source Control','Team work', 'GraphQL','Git','SVN','API'],
+  ['Asana','Github', 'BitBucket', 'BaseCamp', 'Slack'],
+  ['Graphical Design', 'InkScape','Photoshop','GIMP'],
+  ['UI design','Game theory','Blender','Unity']
 
-  <div class="padded grey-bg-2" style="height:500px">
+];
+//skills=skills.concat(skills.reverse());
+var c = document.getElementById("skills");
+var ctx = c.getContext("2d");
+ctx.font = "70px monospace";
+
+var x = 20;
+var y = 40;
+for(var i = 0; i< skills.length; i++){
+  x=20;
+  for(var j = 0; j< skills[i].length; j++){
+    ctx.fillStyle = 'rgba(255, 255, 255, .8)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, .12)';
+    ctx.fillText(skills[i][j],x,y);
+    ctx.strokeText(skills[i][j],x,y);
+
+    x+=skills[i][j].length*40+40;
+    ctx.fillStyle = 'rgba(255, 255, 255, .8)';
+    var rndIcon = String.fromCharCode(Math.random() * (9983 - 9728) + 9728);
+    ctx.fillText(rndIcon,x,y);
+    ctx.strokeText(rndIcon,x,y);
+    x+=100;
+
+  }
+
+  y+=100;
+
+}
+
+</script>
+<div class="padded grey-bg-2" style="height:500px">
   <div class="frame">
     <div class="face">
       <div class="features">
@@ -34,30 +80,195 @@
     <div class="neck"></div>
     <div class="shirt">@ValeriaVG</div>
   </div>
-  <link type="text/css" rel="stylesheet" href="/css/portrait.css" />
-  <script src="/js/portrait.js?v=2"></script>
+  <link type="text/css" rel="stylesheet" href="http://localhost:4000/css/portrait.css" />
+  <script src="http://localhost:4000/js/portrait.js?v=2"></script>
 </div>
+
+
+
 <div class="leader">
-  <div style="width:600px;margin:0 auto;">
-  <h1 class="dark-secondary text-center">Web Engineer</h1>
-  <p class="leader">
-    Greetings! My name is Valeria Viana Gusmao and I'm a web developer.
-  </p>
-  <p>
-    The portrait above was made with pure css/html and also follows the cursor (Tilt - on mobile version).
-  </p>
-  <p>
-    You can inspect the code here or take a look on <a href="https://codepen.io/valeriavg/pen/oebPGa" target="_blank">this codepen</a>
-  </p>
-  <p>
-    <i class="fa fa-github-alt" aria-hidden="true"></i> <a href="https://github.com/ValeriaVG" target="_blank">@ValeriaVG</a><br>
-    <i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="http://www.linkedin.com/in/valeria-viana-gusmao-80b210b6">Valeria Viana Gusmao</a><br>
-    <i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:valeria.viana.gusmao@gmail.com">valeria.viana.gusmao@gmail.com</a>
-  </p>
-  <p>Last finished project:  <a href="https://vvgcreative.github.io/mockery/">Markup-first mockup framework :: Mockery</a></p>
-  <p>Project in progress:  <a href="https://valeriavg.github.io/thalassian/">Neural network :: English - Thalassian translator</a></p>
+  <div style="margin:0 auto;">
+    <h1 class="dark-hint text-center">:: Portfolio ::</h1>
+    <ul class="portfolio grey-bg-3">
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:orange">
+          <h3 class="text-center">::Mockery::</h3>
+          <p>Markup-First framework for the most natural web design mockup.</p>
+          <p><a href="https://vvgcreative.github.io/mockery/" target="_blank">Preview &amp; docs</a> <a href="https://github.com/VVGCreative/mockery" target="_blank">Source Code</a> </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/mockery.png')">
+
+        </div>
+      </li>
+
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:gold">
+          <h3 class="text-center">::Questl:Cover::</h3>
+          <p>Book-cover inspired login page for Questl (in development)</p>
+          <p><a href="https://codepen.io/valeriavg/pen/BdwXoM" target="_blank">Preview &amp; Source Code</a></p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/questl.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:#ccc">
+          <h3 class="text-center">::Goals::</h3>
+          <p>Nested to-do lists made with React</p>
+          <p><a href="https://vvgcreative.github.io/goals/" target="_blank">Preview</a>
+            <a href="https://github.com/VVGCreative/goals/" target="_blank">Source Code</a></p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/goals.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:skyblue">
+          <h3 class="text-center">::Calculator::</h3>
+          <p>Binary JS Calculator</p>
+          <p><a href="https://codepen.io/valeriavg/pen/QqwGad" target="_blank">Preview &amp; Source Code</a> </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/binarycalc.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:yellow">
+          <h3 class="text-center">::GlowingStones::</h3>
+          <p>Multilingual android puzzle game made with Unity</p>
+          <p><a href="https://play.google.com/store/apps/details?id=com.vvgcreative.glowingstones" target="_blank">Play Store</a> </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/glowingstones.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:violet">
+          <h3 class="text-center">::WeatherApp::</h3>
+          <p>Weather API &amp; geolocation app</p>
+          <p><a href="https://codepen.io/valeriavg/pen/xLvmNm" target="_blank">Preview &amp; Source Code</a> </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/weather.png')">
+        </div>
+        <li class="flip-card">
+          <div class="flip-card-back" style="background:gold">
+            <h3 class="text-center">::Questl:Cover::</h3>
+            <p>Book-cover inspired login page for Questl (in development)</p>
+            <p><a href="https://codepen.io/valeriavg/pen/BdwXoM" target="_blank">Preview &amp; Source Code</a></p>
+          </div>
+          <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/questl.png')">
+          </div>
+        </li>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:pink">
+          <h3 class="text-center">::SelfPortrait::</h3>
+          <p>Pure CSS self-portrait with pure JS animation</p>
+          <p><a href="https://codepen.io/valeriavg/pen/oebPGa" target="_blank">Preview &amp; Source Code</a> </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/portrait.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:beige">
+          <h3 class="text-center">::Thalassian::</h3>
+          <p>Brain.js LSTM (Artificial Recurrent Neural Network Model) English-Thalassian translator</p>
+          <p><a href="https://valeriavg.github.io/thalassian/" target="_blank">Preview</a>
+            <a href="https://github.com/ValeriaVG/thalassian" target="_blank">Source Code</a> </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/thalassian.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:skyblue">
+          <h3 class="text-center">::RandomQuote::</h3>
+          <p>App gets random quote from API and allows to tweet it</p>
+          <p><a href="https://codepen.io/valeriavg/pen/gxVByG" target="_blank">Preview &amp; Source Code</a></p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/quote.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:gray">
+          <h3 class="text-center">::ImageCrop::</h3>
+          <p>HTML5 canvas crop tool</p>
+          <p><a href="https://codepen.io/valeriavg/pen/VKOWry" target="_blank">Preview &amp; Source Code</a></p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/crop.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:orchid">
+          <h3 class="text-center">::TwitchAPI::</h3>
+          <p>Twitch API consuming App made for FreeCodeCamp</p>
+          <p><a href="https://codepen.io/valeriavg/pen/wrwMQM" target="_blank">Preview &amp; Source Code</a></p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/twitch.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:white">
+          <h3 class="text-center">::WikiSearch::</h3>
+          <p>Wikipedia search + random article app</p>
+          <p><a href="https://codepen.io/valeriavg/pen/LzPpGR" target="_blank">Preview &amp; Source Code</a></p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/wikipedia.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:pink">
+          <h3 class="text-center">::MCPVR::</h3>
+          <p>Material color palette &amp; vertical rhythm front-end framework</p>
+          <p><a href="https://valeriavg.github.io/mcpvr/" target="_blank">Preview &amp; Docs</a>
+            <a href="https://github.com/ValeriaVG/mcpvr" target="_blank">Source Code</a>
+          </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/mcpvr.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:lime">
+          <h3 class="text-center">::ColorSlider::</h3>
+          <p>Color slider - part of the MakeMaker neural network training interface</p>
+          <p><a href="https://codepen.io/valeriavg/pen/ZKXvYX" target="_blank">Preview &amp; Source Code</a>
+          </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/slider.png')">
+        </div>
+      </li>
+      <li class="flip-card">
+        <div class="flip-card-back" style="background:hotpink">
+          <h3 class="text-center">::ImageZone::</h3>
+          <p>ImageZone - part of the MakeMaker neural network training interface</p>
+          <p><a href="https://codepen.io/valeriavg/pen/ZKXvYX" target="_blank">Preview &amp; Source Code</a>
+          </p>
+        </div>
+        <div class="flip-card-front" style="background-image:url('http://localhost:4000/assets/img/select.png')">
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
+<div class="leader" style="width:600px;margin:0 auto;">
+
+  <h2 class="dark-hint text-center">:: Contacts ::</h2>
+  <div class="grid trailer">
+    <div class="cell-1"><i class="fa fa-github-alt" aria-hidden="true"></i></div>
+    <div class="cell-5"><a href="https://github.com/ValeriaVG" target="_blank">@ValeriaVG</a></div>
+    <div class="cell-1"><i class="fa fa-linkedin-square" aria-hidden="true"></i></div>
+    <div class="cell-5"><a href="http://www.linkedin.com/in/valeria-viana-gusmao-80b210b6">Valeria Viana Gusmao</a></div>
+    <div class="cell-1"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+    <div class="cell-5"><a href="mailto:valeria.viana.gusmao@gmail.com" style="font-size:12px;">valeria.viana.gusmao@gmail.com</a></div>
+    <div class="cell-1"><i class="fa fa-free-code-camp" aria-hidden="true"></i></div>
+    <div class="cell-5"><a href="https://www.freecodecamp.org/valeriavg">ValeriaVG</a></div>
+    <div class="cell-1"><i class="fa fa-stack-overflow" aria-hidden="true"></i></div>
+    <div class="cell-5"><a href="https://stackoverflow.com/users/4276604/valeria-viana-gusmao">Valeria Viana Gusmao</a></div>
+  </div>
 </div>
+
+<!--div class="leader">
+  <ul>
+    
+  </ul>
+</div-->
+</div>
+
 
 </body>
 
