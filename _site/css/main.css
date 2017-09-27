@@ -57,3 +57,24 @@
   opacity: 1;
   transform: rotateY(0deg);
   z-index: 3; }
+
+@media (max-width: 799px) {
+  .portfolio {
+    width: 400px;
+    margin: 0 auto; }
+
+  #skills {
+    width: 100% !important;
+    left: 0 !important; } }
+@media (max-width: 1599px) and (min-width: 1230px) {
+  .portfolio {
+    width: 1230px;
+    margin: 0 auto; } }
+@media (min-width: 1645px) {
+  .portfolio {
+    width: 1645px;
+    margin: 0 auto; } }
+@media (max-width: 1199px) and (min-width: 815px) {
+  .portfolio {
+    width: 815px;
+    margin: 0 auto; } }
